@@ -1,4 +1,4 @@
-package part2;
+package threadCoordination;
 
 import java.math.BigInteger;
 

@@ -1,4 +1,4 @@
-package threadCoordination;
+package threadcoordination;
 
 import java.math.BigInteger;
 
@@ -6,7 +6,7 @@ public class ThreadInterrupt2 {
 
     public static void main(String[] args) {
         Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("100000000")));
-        thread.setDaemon(true); // 메인 쓰레드가 종료될 시 데몬쓰레드는 강제적으로 자동 종료되게 함
+        thread.setDaemon(true); // 데몬 쓰레드는 다른 워커 쓰레드들이 모두 종료되고 난 후에 JVM에 의해 종료됨
         thread.start();
 //        thread.interrupt();
     }

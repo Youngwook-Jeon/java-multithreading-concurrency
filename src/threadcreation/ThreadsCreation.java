@@ -1,4 +1,4 @@
-package threadCreation;
+package threadcreation;
 
 public class ThreadsCreation {
 

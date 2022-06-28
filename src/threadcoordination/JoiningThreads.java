@@ -1,4 +1,4 @@
-package threadCoordination;
+package threadcoordination;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

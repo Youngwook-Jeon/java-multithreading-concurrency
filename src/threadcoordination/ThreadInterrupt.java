@@ -1,4 +1,4 @@
-package threadCoordination;
+package threadcoordination;
 
 public class ThreadInterrupt {
 

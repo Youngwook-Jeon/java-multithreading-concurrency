@@ -1,4 +1,4 @@
-package threadCreation;
+package threadcreation;
 
 import java.util.List;
 

@@ -1,27 +1,22 @@
 package interthreadcommunication;
 
-public class Synchronization {
+public class LockingWithCustomObjects {
 
     public static int counter1 = 0;
     public static int counter2 = 0;
-    public static int counter3 = 0;
 
-    // We have to make sure this method is called only by a single thread at a given time
-    public static synchronized void increment1() {
-        counter1++;
+    private static final Object lock1 = new Object();
+    private static final Object lock2 = new Object();
+
+    public static void increment1() {
+        synchronized (lock1) {
+            counter1++;
+        }
     }
 
-    // Because our Synchronization object has a single lock:
-    // this is why the methods can not be executed at the same time
-    public static synchronized void increment2() {
-        counter2++;
-    }
-
-    public static void increment3() {
-        // class level locking
-        // rule of thumb: we synchronize blocks that are 100% necessary
-        synchronized (Synchronization.class) {
-            counter3++;
+    public static void increment2() {
+        synchronized (lock2) {
+            counter2++;
         }
     }
 
